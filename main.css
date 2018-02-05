@@ -1,0 +1,82 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3vh;
+  text-align: center;
+  background: black;
+}
+
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  height: 100vh;
+  grid-template-columns: minmax(100px, auto);
+  grid-auto-rows: minmax(100px auto);
+  grid-template-areas: 
+  "a b c d"
+  "e f g h"
+  "i i i i"
+  "j k k l"
+  "m n o p"
+  ;
+  align-content: center;
+
+}
+
+.box{
+ height: 18vh;
+ border: 10px;  
+ border-radius: 10%;
+ background: lawngreen;
+ align-content: center;
+}
+
+ .area1  {grid-area: a; }
+ .area2  {grid-area: b; }
+ .area3  {grid-area: c; }
+ .area4  {grid-area: d; }
+ .area5  {grid-area: e; }
+ .area6  {grid-area: f; }
+ .area7  {grid-area: g; }
+ .area8  {grid-area: h; }
+ .area9 {
+   grid-area: i;
+   
+   background-color: lawngreen;
+  -webkit-transition: background-color 2s ease-out, height 2s ease-in-out;
+  -moz-transition: background-color 2s ease-out, height 2s ease-in-out;
+  -o-transition: background-color 2s ease-out, height 2s ease-in-out;
+  transition: background-color 2s ease-out, height 2s ease-in-out;
+}
+
+ .area9:hover {
+   background-color: orange;
+   height: 50vh;
+  
+ }
+ .area10  {grid-area: j; }
+ .area11  {grid-area: k; }
+ .area12  {grid-area: l; }
+ .area13  {grid-area: m; }
+ .area14  {grid-area: n; }
+ .area15  {grid-area: o; }
+ .area16  {grid-area: p; }
+
+ @media screen and (max-width: 500px) {
+  .wrapper {
+    height: auto;
+    grid-template-areas: 
+    "a b" 
+    "c d"
+    "e f" 
+    "g h"
+    "i i"
+    "j l"
+    "k k"
+    "m n" 
+    "o p"
+    ;
+    align-content: center;
+    
+  }
+   
+ }
